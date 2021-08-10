@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserate', sans-serif;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  margin-top: 35px;
+  max-width: 600px;
+}
+
+.container h1 {
+  margin: 0;
+  transform: translateX(10%);
+  opacity: 0.8;
+}
+
+.container .card {
+  border: 1px solid grey;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  opacity: 0.9;
+}
+
+.container .card.active {
+  background: #fefefe;
+}
+
+.container .card h4 {
+  display: inline-block;
+  width: 90%;
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.container .card .close {
+  display: none;
+}
+
+.container .card.active .close {
+  display: initial;
+  position: absolute;
+  right: 20px;
+  top: 21px;
+  background: grey;
+  padding: 3px;
+  color: #fff;
+  border-radius: 50%;
+  padding-right: 5px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.container .card .open {
+  position: absolute;
+  right: 20px;
+  top: 21px;
+  cursor: pointer;
+}
+.container .card.active .open {
+  display: none;
+}
+
+.container .card p {
+  display: none;
+}
+.container .active p {
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.card.active::before {
+  content: '\f086';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 7rem;
+  position: absolute;
+  color: #2ecc71;
+  opacity: 0.3;
+  top: -10px;
+  left: 0;
+}

@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rebeccapurple;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.counter-container {
+  color: #fff;
+  margin: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.counter {
+  font-size: 48px;
+  margin: 10px 0px;
+}
+
+@media (max-width: 530px) {
+  body {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: #222;
+  font-family: 'Muli', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 70px;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-nav {
+  transform-origin: left top;
+  transform: rotate(-15deg);
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+/* navigation */
+
+.nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  transition: opacity 0.4s ease;
+  color: #fff;
+  opacity: 0;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.nav ul a {
+  margin: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  position: fixed;
+  background-color: #ff2424;
+  display: flex;
+  justify-content: space-around;
+  /* transform: rotate(-180deg); */
+  transition: transform 0.7s ease;
+  top: -100px;
+  left: -100px;
+  border-radius: 50%;
+}
+
+.show-nav + .circle {
+  transform: rotate(-180deg);
+}
+
+.circle button {
+  background: transparent;
+  font-size: 26px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.circle #close {
+  padding-top: 20px;
+  align-self: flex-start;
+}
+
+.circle #open {
+  padding-bottom: 20px;
+  align-self: flex-end;
+}
+
+.circle button:focus {
+  outline-style: none;
+}
+
+.container .content {
+  max-width: 900px;
+  line-height: 1.5;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+.content h1 {
+  margin: 0;
+}
+
+.content img {
+  width: 100%;
+}

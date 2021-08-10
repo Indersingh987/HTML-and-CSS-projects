@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: rgb(46, 130, 199);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+h1 {
+  margin: 10px 0 0;
+}
+
+.big-cup {
+  background: #fff;
+  height: 350px;
+  width: 150px;
+  border-radius: 0 0 40px 40px;
+  border: 4px solid blue;
+
+  overflow: hidden;
+}
+
+.remained {
+  color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 87.5%;
+  transition: height 0.3s ease;
+}
+
+.remained #liters {
+  font-weight: bold;
+}
+
+.big-cup .filled {
+  background: steelblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12.5%;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+}
+
+.small-cup {
+  width: 50px;
+  height: 95px;
+  border: 3px solid blue;
+  margin: 10px;
+  color: blue;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.small-cup.fill {
+  background: steelblue;
+}
